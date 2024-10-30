@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaptopActivity">
+
+
+    <ImageView
+        android:id="@+id/laptopBackButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/vector" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Laptops"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="always"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/macbook_m3_pro" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Apple MacBook M3 Pro is a high-performance laptop designed for professionals, and more."
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Apple MacBook M3 Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:id="@+id/AppleMacbookM3ProPercentageOfRatings1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopMacBookM3ProSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/galaxy_book4_series" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Samsung Galaxy Book4 Series"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Samsung Galaxy Book 3 is a lightweight laptop featuring a 15.6-inch display and powered by Intel processors and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopGalaxyBook4SeriesSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lenovo_legion_7i" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Lenovo Legion 7i"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Lenovo Legion 7i is a high-performance gaming laptop, designed for gamers and creators, and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopLenovoLegion7ISeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xioami_notebook_pro_120g" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xiaomi Notebook Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Xiaomi Notebook Pro features a 120Hz 2.5K display, 12th Gen Intel Core i5, NVIDIA GeForce and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopXiaomiNotebookProSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/huawei_matebook15_img2" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Huawei Matebook 15"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Huawei Matebook D15 is a versatile and budget-friendly laptop designed for everyday productivity and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopHuaweiMatebook15SeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lenovo_thinkpad_t14s" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Lenovo Thinkpad T14s"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Lenovo ThinkPad T14s is a lightweight and durable business laptop, known for its robust security and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopLenovoThinkPadT14sSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/apple_m2_macbook_pro_14" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Apple M2 MacBook Pro 14"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="MacBook Pro 14 with the M2 chip delivers exceptional performance, liquid retina XDR display and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopAppleM2MacBookPro14SeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/samsung_galaxy_book_3" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Samsung Galaxy Book 3"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Samsung Galaxy Book 3 is a lightweight laptop featuring a 15.6-inch display and powered by Intel processors and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopSamsungGalaxyBook3SeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/huawei_matebook_x_pro" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Huawei Matebook X Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Huawei MateBook X Pro is an ultra-slim, high-end laptop designed for professionals, robust build and more."
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/laptopHuaweiMatebookXProSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:background="#2F2F2F"
+                android:backgroundTint="#2F2F2F" />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

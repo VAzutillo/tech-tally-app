@@ -1,0 +1,1911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#2F2F2F"
+    tools:context=".UserDashboardActivity">
+
+    <ImageView
+        android:id="@+id/profileBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/grey"
+        android:src="@drawable/guest"
+        android:contentDescription="@string/sign_up_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+
+
+    <TextView
+        android:id="@+id/tv.share.review.discover"
+        android:layout_width="111dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/share_review_discover_dashboard"
+        android:textColor="@color/light_grey"
+        android:textColorHint="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Signup/Login"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+
+    <TextView
+        android:id="@+id/viewAllButton"
+        android:layout_width="53dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:text="View all"
+        android:textColor="@color/light_grey"
+        android:textColorHint="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tvDiscover"
+        android:layout_width="125dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="Search Devices"
+        android:text="Discover phones"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#000000"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/black"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:drawableTint="@color/white"
+            android:ellipsize="end"
+            android:hint="Search Devices"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
+
+
+    <ImageView
+        android:id="@+id/smartphonBtn"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
+        app:srcCompat="@drawable/smartphone" />
+
+    <ImageView
+        android:id="@+id/tabletBtn"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
+        app:srcCompat="@drawable/laptop" />
+
+    <ImageView
+        android:id="@+id/laptopBtn"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275"
+        app:srcCompat="@drawable/tablet" />
+
+
+
+
+    <ScrollView
+        android:layout_width="320dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_vertical_scrollview"
+        android:fillViewport="true"
+        android:fadingEdgeLength="50dp"
+        android:overScrollMode="always"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.933">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="320dp"
+                android:layout_height="140dp"
+                android:background="@drawable/rounded_corner"
+                android:fillViewport="true"
+                android:overScrollMode="always"
+                android:scrollbars="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="320dp"
+                        android:layout_height="140dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/SamsungGalaxyS24"
+                            android:layout_width="317dp"
+                            android:layout_height="140dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Samsung Galaxy S24 Ultra"
+                            android:padding="20dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/samsung_galaxy_s24ultra" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="78dp"
+                            android:text="Samsung Galaxy S24 Ultra"
+                            android:textColor="@color/white" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="320dp"
+                        android:layout_height="140dp">
+
+                        <ImageView
+                            android:id="@+id/Xiaomi_14_ultra"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Samsung Galaxy S24 Ultra"
+                            android:padding="15dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/xiaomi_14_ultra" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="110dp"
+                            android:text="Xiaomi 14 Ultra"
+                            android:textColor="@color/white" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="320dp"
+                        android:layout_height="140dp">
+
+                        <ImageView
+                            android:id="@+id/Iphone_16_Pro_Max"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Samsung Galaxy S24 Ultra"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/iphone_16_pro_max" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="100dp"
+                            android:text="Iphone 16 Pro Max"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="320dp"
+                        android:layout_height="140dp">
+
+                        <ImageView
+                            android:id="@+id/Oppo_Reno_12_Pro"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Samsung Galaxy S24 Ultra"
+                            android:padding="15dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/oppo_reno_12_pro" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="105dp"
+                            android:text="Oppo Reno 12 Pro"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="320dp"
+                        android:layout_height="140dp">
+
+                        <ImageView
+                            android:id="@+id/Realme_13_Pro_Plus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackground"
+                            android:contentDescription="Samsung Galaxy S24 Ultra"
+                            android:padding="15dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/realme_13_pro_plus" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="100dp"
+                            android:text="Realme 13 Pro Plus"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="130dp"
+                app:srcCompat="@drawable/carousel"/>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="10dp"
+                android:text="Devices"
+                android:textColor="#2F2F2F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.57" />
+
+            <!-- Iphone 16 Pro Max -->
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/rounded_corner"
+                    android:src="@drawable/iphone_16_pro_max" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Iphone 16 Pro Max"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:id="@+id/Iphone16ProMaxPercentageOfRatings1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/Iphone16ProMaxSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:fillViewport="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/samsung_galaxy_s24_1"
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/samsung_galaxy_s24" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Samsung Galaxy S24"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:id="@+id/SamsungS24percentageOfRatings1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/samsungGalaxyS24SeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:fillViewport="true"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/apple_iphone_16_pro_max_1"
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/macbook_m3_pro" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Apple MacBook M3 Pro is a high-performance laptop designed for professionals, and more."
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Apple MacBook M3 Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:id="@+id/AppleMacbookM3ProPercentageOfRatings1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/UserDashboardMacBookM3ProSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    android:background="@drawable/underline_effect"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="2dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:fillViewport="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/samsung_galaxy_s24_ultra"
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/samsung_galaxy_s24ultra" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Samsung Galaxy S24 Ultra"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/samsungGalaxyS24UltraSeeMoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xioami_notebook_pro_120g" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xioami Notebook Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xiaomi_redmi_note_14_5g" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xioami Redmi Note 14 5G"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ipad_13_pro" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Ipad 13 Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/oppo_pad_2" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text=" Oppo Pad 2"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/galaxy_book4_series" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Galaxy Book4 Series"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/galaxy_tab_s10_ultra" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Galaxy Tab S10 Ultra"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/oppo_reno_12_pro" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Oppo Reno 12 Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/oppo_pad_2" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Oppo Pad 2"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xiaomi_redmi_note_14_5g" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xiaomi Redmi Note 14 5G"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/realme_pad_2" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Realme Pad 2"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xioami_pad_6_pro" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xiaomi Pad 6 Pro"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/xioami_notebook_pro_120g" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xiaomi Notebook Pro 120G"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/realme_pad_2" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Realme Pad 2"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="320dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rounded_corner"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/realme_c61" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Realme C61"
+                    android:textColor="@color/light_black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+
+                    android:layout_width="180dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:text="Discover the epic Galaxy S24 and S24+ with mobile AI, QHD+ display, ProVisual engine and more. "
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="180dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:background="?android:attr/listDivider" />
+
+                <ImageView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="7dp"
+                    app:srcCompat="@drawable/userdashboard_logo" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="4.5 out of 5"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SEE MORE"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--Profile Pop-up-->
+    <FrameLayout
+        android:id="@+id/profilePopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="779dp"
+            android:layout_gravity="center"
+            android:background="@drawable/profile_corner"
+            android:backgroundTint="#2F2F2F"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="100dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:id="@+id/profileBtn2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/vector" />
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Profile"
+                    android:textColor="#2F2F2F"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/vector2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/guest" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loginSignupBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingLeft="10dp"
+                    android:text="Signup/Login"
+                    android:textColor="#2F2F2F"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:id="@+id/divider10"
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#2F2F2F"
+                    android:backgroundTint="#2F2F2F" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

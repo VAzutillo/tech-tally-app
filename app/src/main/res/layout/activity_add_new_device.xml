@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    tools:context=".AddNewDeviceActivity">
+
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="310dp"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29" />
+
+    <TextView
+        android:id="@+id/tvModel"
+        android:layout_width="99dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Model"
+        android:textColor="@color/whites"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:background="@color/whites"
+        android:backgroundTint="@color/whites"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whites"
+            android:backgroundTint="@color/whites" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:layout_width="99dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Overview"
+        android:textColor="@color/whites"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
+
+    <Button
+        android:id="@+id/uploadBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Upload"
+        android:textColor="@color/whites"
+        android:textSize="18sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:strokeColor="@null" />
+
+    <Button
+        android:id="@+id/brandsButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#2F2F2F"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Brands"
+        android:textColor="@color/whites"
+        android:textSize="22sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221"
+        app:strokeColor="@null" />
+
+    <Button
+        android:id="@+id/AddSmarphoneButton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#2F2F2F"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Smartphone"
+        android:textColor="@color/whites"
+        android:textSize="16sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105"
+        app:strokeColor="@null" />
+
+    <Button
+        android:id="@+id/addTabletButton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#2F2F2F"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Tablet"
+        android:textColor="@color/whites"
+        android:textSize="16sp"
+        app:cornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105"
+        app:strokeColor="@null" />
+
+    <TextView
+        android:id="@+id/tvAddNewDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Add Device"
+        android:textColor="@color/whites"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout9"
+        android:layout_width="299dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/whites"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#1E1E1E"
+        app:counterEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whites"
+            android:backgroundTint="@color/whites" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/specificationsBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#2F2F2F"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Specifications"
+        android:textSize="16sp"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Device image"
+        android:textColor="@color/whites"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <Button
+        android:id="@+id/uploadImageBtn"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/whites"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Upload image"
+        android:textColor="#2F2F2F"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <!-- Popup Layout for Brand Selection -->
+    <FrameLayout
+        android:id="@+id/brandPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="330dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:background="@drawable/brands_corner">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="70dp"
+                android:text="Select Brand"
+                android:textColor="#2F2F2F"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnApple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:text="Apple"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/btnSamsung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:text="Samsung"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/btnXiaomi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:text="Xiaomi"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/btnRealme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:text="Realme"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/btnOppo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:text="Oppo"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Popup Layout for Image Upload -->
+    <FrameLayout
+        android:id="@+id/imageUploadPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/upload_image_corner"
+            android:orientation="vertical"
+            android:paddingLeft="60dp">
+
+            <TextView
+                android:id="@+id/tvUploadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingTop="35dp"
+                android:paddingRight="60dp"
+                android:paddingBottom="20dp"
+                android:text="Upload image"
+                android:textColor="#2F2F2F"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnUploadFromDevice"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2F2F2F"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Upload from device"
+                android:textColor="@color/whites"
+                app:cornerRadius="6dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/popupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="310dp"
+            android:layout_gravity="center"
+            android:background="@drawable/overview_corner"
+            android:orientation="vertical"
+            android:paddingLeft="35dp">
+
+            <TextView
+                android:id="@+id/tvPopupOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingLeft="65dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Overview"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPopupDeviceOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Device overview"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutDeviceOverview"
+                android:layout_width="230dp"
+                android:layout_height="180dp"
+                android:background="#2F2F2F"
+                android:textColorHint="#FFFFFF"
+                app:hintTextColor="#FFFFFF"
+                app:placeholderText="Input text here..."
+                app:placeholderTextColor="#FFFFFF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDeviceOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F2F2F"
+                    android:inputType="textMultiLine"
+                    android:letterSpacing="0.1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#2F2F2F"
+                android:text="Continue"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/specificationsPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="510dp"
+            android:layout_gravity="center"
+            android:background="@drawable/brands_corner"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/tvSpecifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="45dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Specifications"
+                android:textColor="#2F2F2F"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Processor TextInputLayout -->
+            <TextView
+                android:id="@+id/tvProcessor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Processor"
+                android:textColor="#2F2F2F"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProcessor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F2F2F"
+                    android:letterSpacing="0.1"
+                    android:scrollHorizontally="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Memory TextInputLayout -->
+            <TextView
+                android:id="@+id/tvMemory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memory"
+                android:textColor="#2F2F2F"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMemory"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:background="#2F2F2F"
+                    android:letterSpacing="0.1"
+                    android:scrollHorizontally="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Display TextInputLayout -->
+            <TextView
+                android:id="@+id/tvDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display"
+                android:textColor="#2F2F2F"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F2F2F"
+                    android:letterSpacing="0.1"
+                    android:scrollHorizontally="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Battery TextInputLayout -->
+            <TextView
+                android:id="@+id/tvBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery"
+                android:textColor="#2F2F2F"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBattery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F2F2F"
+                    android:letterSpacing="0.1"
+                    android:scrollHorizontally="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Camera TextInputLayout -->
+            <TextView
+                android:id="@+id/tvCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textColor="#2F2F2F"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2F2F2F"
+                    android:letterSpacing="0.1"
+                    android:scrollHorizontally="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Buttons Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingRight="140dp"
+                    android:text="Back"
+                    android:textColor="#2F2F2F"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/continueButton"
+                    android:layout_width="40dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2F2F2F"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Continue"
+                    android:textColor="@color/whites"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="310dp"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <FrameLayout
+        android:id="@+id/uploadDevicePopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:background="@drawable/brands_corner"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <TextView
+                android:id="@+id/tvUploadDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingLeft="60dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="25dp"
+                android:text="Upload Device?"
+                android:textColor="#2F2F2F"
+                android:textSize="20sp" />
+
+            <!-- Buttons Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+            <Button
+                android:id="@+id/YesBtn"
+                android:layout_width="10dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="Yes"
+                android:textColor="@color/whites"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/NoBtn"
+                android:layout_width="10dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:layout_weight="1"
+                android:backgroundTint="#CC0606"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="No"
+                android:textColor="@color/whites"
+                android:textSize="10sp" />
+        </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<!-- scrollbar_thumb.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="5dp"
+        android:height="5dp" />
+    <solid android:color="#3C3B3B" /> <!-- You can choose any color -->
+</shape>

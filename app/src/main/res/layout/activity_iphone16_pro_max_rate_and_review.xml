@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Iphone16ProMaxRateAndReviewActivity">
+
+    <ImageView
+        android:id="@+id/Iphone16ProMaxRateAndReviewBackButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/vector" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Rate and Review"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114"
+        app:srcCompat="@drawable/guest" />
+
+    <TextView
+        android:id="@+id/Iphone16ProMaxRateAndReviewNameOfUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="44dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Iphone16ProMaxRateAndReviewNameOfUser">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Rate"
+                android:textColor="#2F2F2F"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Iphone16ProMaxRateAndReviewButtonTally1"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="#D9D9D9" />
+
+            <Button
+                android:id="@+id/Iphone16ProMaxRateAndReviewButtonTally2"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="#D9D9D9" />
+
+            <Button
+                android:id="@+id/Iphone16ProMaxRateAndReviewButtonTally3"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="#D9D9D9" />
+
+            <Button
+                android:id="@+id/Iphone16ProMaxRateAndReviewButtonTally4"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="#D9D9D9" />
+
+            <Button
+                android:id="@+id/Iphone16ProMaxRateAndReviewButtonTally5"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="#D9D9D9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Comment"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="310dp"
+                    android:layout_height="280dp"
+                    android:layout_marginLeft="25dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    android:inputType="text"
+                    android:letterSpacing="0.1"
+                    android:maxLines="8"
+                    android:scrollbars="vertical"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:boxStrokeColor="#2F2F2F"
+                    app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Iphone16ProMaxRateAndReviewComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Type here..."
+                        android:paddingStart="20dp"
+                        android:scrollbars="vertical"
+                        android:gravity="top"
+                        android:maxLines="10"
+                        android:minLines="1"
+                        android:inputType="textMultiLine"
+                        android:paddingBottom="240dp"
+                        android:textColorHint="#D9D9D9"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Iphone16ProMaxRateAndReviewSubmitButton"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:backgroundTint="#2F2F2F"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Submit"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
