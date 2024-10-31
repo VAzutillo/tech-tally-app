@@ -15,13 +15,13 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".SmartphoneActivity">
+        tools:context=".SamsungGalaxyS24FullDetails">
 
-    <!-- Background of the picture -->
+        <!-- Background of the picture -->
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="350dp"
             android:layout_centerInParent="true"
             android:background="@drawable/border_full_details"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">>
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
                 android:layout_width="250dp"
@@ -42,29 +42,29 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="51dp"
                 android:layout_marginBottom="40dp"
-                app:srcCompat="@drawable/samsung_galaxy_s24" />
+                app:srcCompat="@drawable/samsung_galaxy_s24img3" />
 
             <ImageView
                 android:id="@+id/samsungGalaxyS24FullDetailsBackButton"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="20dp"
-                android:layout_marginBottom="246dp"
+                android:layout_marginBottom="250dp"
                 app:srcCompat="@drawable/baseline_keyboard_arrow_left_24" />
 
         </RelativeLayout>
 
+        <!-- Name of the phone -->
         <LinearLayout
             android:id="@+id/nameOfDevice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginTop="40dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
@@ -75,10 +75,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
-                android:paddingLeft="30dp"
+                android:paddingLeft="22dp"
                 android:text="Samsung Galaxy S24"
                 android:textColor="#2F2F2F"
-                android:textSize="24sp" />
+                android:textSize="28sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,7 +99,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="23dp"
                     android:text="Smartphone"
                     android:textColor="#2F2F2F"
                     android:textSize="16sp" />
@@ -108,7 +108,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical">
 
                 <View
@@ -134,17 +134,19 @@
                         android:id="@+id/percentageOfRatings"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="135dp"
+                        android:layout_marginLeft="120dp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="0"
                         android:textColor="#2F2F2F"
-                        android:textSize="24sp" />
+                        android:textSize="26sp" />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="3dp"
+                        android:id="@+id/percentageLogo"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:paddingRight="150dp"
                         app:srcCompat="@drawable/userdashboard_logo" />
 
                 </LinearLayout>
@@ -158,9 +160,8 @@
                         android:id="@+id/numberOfReviews"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="140dp"
+                        android:layout_marginLeft="130dp"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="0 reviews"
                         android:textColor="#2F2F2F"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -168,7 +169,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <View
@@ -186,7 +187,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="1dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +198,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="About this device"
                 android:textColor="#2F2F2F"
@@ -206,8 +207,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="With a refined design, tons of power, a  built-in stylus, helpful AI tools, and seven years of promised updates, the Samsung Galaxy S24 Ultra is one of the best Android phones you can buy for the long haul."
                 android:textColor="#2F2F2F"
                 android:textSize="14sp" />
@@ -233,7 +234,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Rate this device"
                     android:textColor="#2F2F2F"
@@ -248,7 +249,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="19dp"
                     android:text="Tell others what you think"
                     android:textColor="#2F2F2F"
                     android:textSize="16sp" />
@@ -306,7 +307,7 @@
                     android:id="@+id/samsungGalaxyS24FullDetailsWriteAndReviewButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Write a review"
                     android:textColor="#2F2F2F" />
@@ -315,7 +316,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical">
 
                 <View
@@ -345,7 +346,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="90dp"
+                    android:layout_marginLeft="80dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Specifications"
                     android:textColor="#2F2F2F"
@@ -356,7 +357,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="25dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -382,7 +382,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="45dp"
-                        android:layout_marginLeft="80dp"
+                        android:layout_marginLeft="85dp"
                         app:srcCompat="@drawable/ram_logo" />
 
                     <TextView
@@ -391,7 +391,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="8/12GB RAM"
+                        android:text="8-core"
                         android:textColor="#2F2F2F"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -408,11 +408,60 @@
                     android:layout_marginTop="30dp"
                     android:orientation="horizontal">
 
+
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="45dp"
-                        android:layout_marginLeft="40dp"
-                        app:srcCompat="@drawable/camera_logo" />
+                        android:layout_marginStart="40dp"
+                        app:srcCompat="@drawable/processor_logo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="8/12GB RAM"
+                        android:textColor="#2F2F2F"
+                        android:textSize="16sp" />
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/battery2_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="4000mAh"
+                        android:textColor="#2F2F2F"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="40dp"
+                        app:srcCompat="@drawable/camera_logo"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -424,23 +473,15 @@
                         android:textColor="#2F2F2F"
                         android:textSize="16sp" />
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="45dp"
-                        android:layout_marginLeft="60dp"
-                        app:srcCompat="@drawable/battery2_logo" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="4000mAh"
-                        android:textColor="#2F2F2F"
-                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
+
+
+
         </LinearLayout>
+
+
+
 
         <LinearLayout
             android:id="@+id/Display1"
@@ -450,7 +491,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specifications1">>
+            app:layout_constraintTop_toBottomOf="@+id/specifications1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -462,6 +503,141 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="130dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Processor"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="OS"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="Android 14, up to 7 major Android Upgrades, One UI 6.1.1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Chipset"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="Qualcomm SM8650-AC Snapdragon 8 Gen 3(4 nm)"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="CPU"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="8-core (1x3.39GHz Cortex-A720 And 2x2.2GHz Cortex-A520)"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="GPU"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:text="Adreno 750 (1 GHz)"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Display"
                     android:textSize="26sp" />
@@ -491,7 +667,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="Dynamic LTPO AMOLED 2X, 120Hz, HDR10+,2600nits (peak)"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -499,7 +675,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -517,11 +693,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="6.2 inches, 44.4cm2, (90.9% screen-to-body-ratio)"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -529,7 +704,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -550,7 +725,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="1080 x 2340 pixels, 19.5:9 ratio (~416 ppi density)"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -564,7 +739,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Display1">>
+            app:layout_constraintTop_toBottomOf="@+id/Display1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -578,6 +753,22 @@
                     android:fontFamily="@font/roboto_bold"
                     android:text="Camera"
                     android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="________ Main Camera ________"
+                    android:textSize="22sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -604,7 +795,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="50 MP, f/1.8, 24mm (wide), 1/1.56&quot;,  1.0µm, dual pixel PDAF, OIS 10 MP,  f/2.4, 67mm (telephoto), 1/3.94&quot;,  1.0µm, PDAF, OIS, 3x optical zoom  12 MP, f/2.2, 13mm, 120˚ (ultrawide),  1/2.55&quot; 1.4µm, Super Steady video."
                     android:textSize="16sp" />
             </LinearLayout>
@@ -612,7 +803,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -661,10 +852,112 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="8K@24/30fps, 4K@30/60fps, 1080p @30/60/240fps, HDR10+, stereo  sound rec., gyro-EIS"
                     android:textSize="16sp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="________ Selfie Camera ________"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Single"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:text="32 MP,f/2.0.20mm (ultrawide)"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Features"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="HDR"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Video"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:text="4K@30/60fps, 1080p@30/60fps"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -685,7 +978,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginLeft="120dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Memory"
                     android:textSize="26sp" />
@@ -702,7 +995,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Internal"
+                    android:text="Card Slot"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -716,10 +1009,33 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
+                    android:text="No"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Internal"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="128GB 8GB RAM, 256GB  8GB RAM, 256GB 12GB RAM,  512GB 8GB RAM UFS 3.1 - 128GB only UFS 4.0"
                     android:textSize="16sp" />
             </LinearLayout>
-        </LinearLayout>
+        </LinearLayout>>
 
         <LinearLayout
             android:id="@+id/Battery1"
@@ -739,7 +1055,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginLeft="120dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Battery"
                     android:textSize="26sp" />
@@ -769,9 +1085,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="20dp"
                     android:text="Li-Ion 4000 mAh, non-removable"
                     android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Charging"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:text="100W wired, 50% in 14 min (advertised) 50W wireless Reverse wired"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -787,13 +1133,13 @@
                     android:background="#2F2F2F"
                     android:backgroundTint="#2F2F2F" />
             </LinearLayout>
-        </LinearLayout>
+        </LinearLayout>>
 
         <LinearLayout
             android:id="@+id/Pricing1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -807,7 +1153,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginLeft="120dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Pricing"
                     android:textSize="26sp" />
@@ -836,7 +1182,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="50dp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="₱53,990"
                         android:textSize="16sp" />
@@ -865,7 +1211,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="50dp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="₱84,990"
                         android:textSize="16sp" />
@@ -894,7 +1240,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="50dp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="₱92,990"
                         android:textSize="16sp" />
@@ -902,7 +1248,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearDivider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
@@ -911,105 +1256,104 @@
                 <View
                     android:layout_width="300dp"
                     android:layout_height="1dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="20dp"
                     android:background="#2F2F2F"
                     android:backgroundTint="#2F2F2F" />
-
             </LinearLayout>
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/RatingsAndReview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Pricing1">
 
-        <LinearLayout
-            android:id="@+id/RatingsAndReview1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Pricing1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Rating and reviews"
+                        android:textColor="#2F2F2F"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/SamsungS24SeeAllReviews1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        app:srcCompat="@drawable/figma_arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/SamsungS24Reviews1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/RatingsAndReview1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:listitem="@layout/item_review" />
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/SamsungS24SeeAllReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SamsungS24Reviews1">
+
+
+                <TextView
+                    android:id="@+id/SamsungS24SeeAllReviews2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="See all reviews"
+                    android:textColor="#2F2F2F" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SamsungS24SeeAllReviews">
+
 
                 <TextView
+                    android:id="@+id/SamsungS24BackToTop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Rating and reviews"
-                    android:textColor="#2F2F2F"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/SamsungS24SeeAllReviews1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="100dp"
-                    app:srcCompat="@drawable/figma_arrow_right" />
+                    android:text="Back to top"
+                    android:textColor="#2F2F2F" />
             </LinearLayout>
-        </LinearLayout>
-
-        <ScrollView
-            android:id="@+id/SamsungS24Reviews1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RatingsAndReview1">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reviewsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_review" />
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/SamsungS24SeeAllReviews"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SamsungS24Reviews1">
-
-
-            <TextView
-                android:id="@+id/SamsungS24SeeAllReviews2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="See all reviews"
-                android:textColor="#2F2F2F" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SamsungS24SeeAllReviews">
-
-
-            <TextView
-                android:id="@+id/SamsungS24BackToTop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Back to top"
-                android:textColor="#2F2F2F" />
-        </LinearLayout>
+        </LinearLayout>>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
