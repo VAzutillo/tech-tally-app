@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Xiaomi14UltraFullDetailsUserdshboard"
+            android:exported="false" />
+        <activity
             android:name=".Realme13ProPlusUserDashboard"
             android:exported="false" />
         <activity
