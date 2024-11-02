@@ -186,15 +186,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="155dp"
-        android:layout_height="130dp"
-        android:src="@drawable/create_account"
+        android:id="@+id/textView6"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:background="@drawable/create_account2"
+        android:textSize="33sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154" />
+
+
 
     <TextView
         android:id="@+id/usernameHint"
