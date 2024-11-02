@@ -189,19 +189,19 @@ class UserDashboardActivity : AppCompatActivity() {
         }
 
         val images = listOf(
-            R.drawable.samsung_galaxy_s24ultra,
-            R.drawable.xiaomi_14_ultra,
-            R.drawable.iphone_16_pro_max,
-            R.drawable.oppo_reno_12_pro,
-            R.drawable.realme_13_pro_plus
+            R.drawable.samsungs24ultra_fea,
+            R.drawable.xiaomi14_feature,
+            R.drawable.iphone16promax_fea,
+            R.drawable.opporeno12pro_fea,
+            R.drawable.realme13proplus_feature
         )
 
         val titles = listOf(
-            "Samsung Galaxy S24 Ultra",
-            "Xiaomi 14 Ultra",
-            "iPhone 16 Pro Max",
-            "Oppo Reno 12 Pro",
-            "Realme 13 Pro Plus"
+            "",
+            "",
+            "",
+            "",
+            ""
         )
 
         val recyclerView: RecyclerView = findViewById(R.id.RecyclerView)
@@ -274,6 +274,42 @@ class UserDashboardActivity : AppCompatActivity() {
             val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
             startActivity(intent)
         }
+        val tabletGalaxyTabS10UltraFullDetails = findViewById<TextView>(R.id.tabletGalaxyTabS10UltraSeeMoreButton)
+        tabletGalaxyTabS10UltraFullDetails.setOnClickListener {
+            val intent = Intent(this, GalaxyTabS10UltraFullDetails ::class.java)
+            startActivity(intent)
+        }
+        val smartphoneOppoReno12ProFullDetails = findViewById<TextView>(R.id.smartphoneOppoReno12ProSeeMoreButton)
+        smartphoneOppoReno12ProFullDetails.setOnClickListener {
+            val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
+            startActivity(intent)
+        }
+        val tabletOppoPad2FullDetails = findViewById<TextView>(R.id.tabletOppoPad2SeeMoreButton)
+        tabletOppoPad2FullDetails.setOnClickListener {
+            val intent = Intent(this, OppoPad2FullDetails::class.java)
+            startActivity(intent)
+        }
+        val smartphoneGooglePixel9ProFullDetails = findViewById<TextView>(R.id.smartphoneGooglePixel9ProSeeMoreButton)
+        smartphoneGooglePixel9ProFullDetails.setOnClickListener {
+            val intent = Intent(this, smartphoneGooglePixel9ProFullDetails::class.java)
+            startActivity(intent)
+        }
+        val tabletXiaomiPad6ProFullDetails = findViewById<TextView>(R.id.tabletXiaomiPad6ProSeeMoreButton)
+        tabletXiaomiPad6ProFullDetails.setOnClickListener {
+            val intent = Intent(this, XiaomiPad6ProFullDetails::class.java)
+            startActivity(intent)
+        }
+        val laptopXiaomiNotebookProFullDetails = findViewById<TextView>(R.id.laptopXiaomiNotebookProSeeMoreButton)
+        laptopXiaomiNotebookProFullDetails.setOnClickListener {
+            val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetails::class.java)
+            startActivity(intent)
+        }
+        val tabletRealmePad2FullDetails = findViewById<TextView>(R.id.tabletRealmePad2SeeMoreButton)
+        tabletRealmePad2FullDetails.setOnClickListener {
+            val intent = Intent(this, RealmePad2FullDetails::class.java)
+            startActivity(intent)
+        }
+
 
 
 
