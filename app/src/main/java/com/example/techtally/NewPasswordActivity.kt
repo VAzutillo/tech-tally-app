@@ -1,6 +1,8 @@
 package com.example.techtally
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,13 @@ class NewPasswordActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val goToNewPassword = findViewById<Button>(R.id.SaveBtn)
+        goToNewPassword.setOnClickListener {
+            // Create an Intent to start the NewPasswordActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            // Start the NewPasswordActivity
+            startActivity(intent)
+        }
+
     }
 }
