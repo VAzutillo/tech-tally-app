@@ -35,7 +35,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         }
 
         // Navigate from forgotPasswordPage to loginPage
-        binding.BackToLogInBtn.setOnClickListener {
+        binding.backtologinbtn.setOnClickListener {
             // Create an Intent to start the LoginActivity
             val intent = Intent(this, LoginActivity::class.java)
             // Start the LoginActivity

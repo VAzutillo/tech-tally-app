@@ -51,7 +51,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="99dp"
         android:fillViewport="true"
         android:scrollbars="none"
         android:overScrollMode="always"
@@ -110,22 +110,13 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
-
                 <TextView
                     android:id="@+id/AppleMacbookM3ProPercentageOfRatings1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="0"
                     android:textColor="#2F2F2F"
@@ -135,10 +126,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="70dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -190,7 +181,7 @@
                     android:layout_height="65dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="30dp"
-                    android:text="Samsung Galaxy Book 3 is a lightweight laptop featuring a 15.6-inch display and powered by Intel processors and more."
+                    android:text="Samsung Galaxy Book4 is a sleek and lightweight laptop designed for portability, productivity and more."
                     android:textSize="13sp" />
 
                 <View
@@ -200,23 +191,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -278,23 +271,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -356,23 +351,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -434,23 +431,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -484,7 +483,7 @@
                     android:layout_width="130dp"
                     android:layout_height="150dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/lenovo_thinkpad_t14s" />
+                    android:src="@drawable/lenovo_thinkpad_t14s"/>
 
                 <TextView
                     android:layout_width="180dp"
@@ -512,23 +511,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -590,23 +591,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -648,7 +651,7 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Samsung Galaxy Book 3"
+                    android:text="Samsung Galaxy Book3"
                     android:textColor="@color/light_black"
                     android:textSize="15sp" />
 
@@ -658,7 +661,7 @@
                     android:layout_height="65dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="30dp"
-                    android:text="Samsung Galaxy Book 3 is a lightweight laptop featuring a 15.6-inch display and powered by Intel processors and more."
+                    android:text="Samsung Galaxy Book3 is a lightweight laptop featuring a 15.6-inch display and powered by Intel processors and more."
                     android:textSize="13sp" />
 
                 <View
@@ -668,23 +671,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -746,23 +751,25 @@
                     android:layout_marginTop="100dp"
                     android:background="?android:attr/listDivider" />
 
-                <ImageView
-
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="7dp"
-                    app:srcCompat="@drawable/userdashboard_logo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="145dp"
+                    android:layout_marginTop="116dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="0"
+                    android:textColor="#2F2F2F"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0 out of 5"
+                    android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
