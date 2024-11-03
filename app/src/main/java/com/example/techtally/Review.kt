@@ -27,3 +27,11 @@ data class AppleMacbookM3ProReview(
     val rating: Int,
     val comment: String
 ) : Parcelable
+
+@Parcelize
+data class SamsungGalaxyTabS10UltraReview(
+    val smartphoneId: Int,
+    val username: String,
+    val rating: Int,
+    val comment: String
+) : Parcelable

@@ -44,7 +44,7 @@
                 app:srcCompat="@drawable/macbook_m3_pro" />
 
             <ImageView
-                android:id="@+id/samsungGalaxyS24FullDetailsBackButton"
+                android:id="@+id/laptopAppleMacbookM3ProFullDetailsBackButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentStart="true"

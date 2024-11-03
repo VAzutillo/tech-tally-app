@@ -10,8 +10,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
     // The base URL for API requests.
     // "10.0.2.2" is used to access the host machine from the Android emulator.
-    private const val BASE_URL = "http://10.0.2.2:8000/api/"
+//    DOMAIN FOR WIFI
+//    LAPTOP AND MOBILE MUST CONNECT ON THE SAME DOMAIN
+   // private const val BASE_URL = "http://192.168.100.112:80/api/"
 
+//    DOMAIN FOR LOCAL EMU
+    private const val BASE_URL = "http://10.0.2.2:8000/api/"
+    private var retrofit: Retrofit? = null
     // Create a Gson instance with lenient parsing settings.
     // Lenient mode allows parsing malformed or unexpected JSON.
     private val gson: Gson = GsonBuilder()
@@ -31,5 +36,14 @@ object RetrofitClient {
     // This is just an alias for 'instance', providing an alternative way to access the API service.
     val apiService: ApiService by lazy {
         instance  // Refers to the same ApiService instance.
+    }
+    fun getInstance(): Retrofit {
+        if (retrofit == null) {
+            retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
+        return retrofit!!
     }
 }
