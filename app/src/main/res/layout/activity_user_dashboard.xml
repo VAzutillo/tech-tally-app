@@ -118,6 +118,7 @@
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
+        android:padding="5dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeColor="@color/black"
         app:hintEnabled="false"
@@ -142,11 +143,11 @@
             android:inputType="text"
             android:letterSpacing="0.1"
             android:maxLines="1"
+            android:padding="5dp"
             android:scrollHorizontally="true"
             android:textColor="#9A9A9A"
-            android:textColorHint="#a9a9a9"
+            android:textColorHint="#FFFFFF"
             android:textSize="14sp"
-            android:padding="5dp"
             android:visibility="visible"/>
 
 
