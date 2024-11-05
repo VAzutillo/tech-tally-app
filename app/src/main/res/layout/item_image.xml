@@ -24,10 +24,10 @@
                 <ImageView
                     android:id="@+id/samsung_galaxy_s24_ultra"
                     android:layout_width="320dp"
-                    android:layout_height="140dp"
+                    android:layout_height="125dp"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Samsung Galaxy S24 Ultra"
-                    android:padding="18dp"
+                    android:padding="20dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/samsungs24ultra_fea" />
 
@@ -35,11 +35,10 @@
                     android:id="@+id/ImageTitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:layout_gravity="center_horizontal|bottom"
                     android:text=""
                     android:textColor="@color/white" />
-
-
 
             </FrameLayout>
 

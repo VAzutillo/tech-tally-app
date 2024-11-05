@@ -14,9 +14,10 @@
 
     <ImageView
         android:id="@+id/profileBtn"
-        android:layout_marginEnd="2.5dp"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:backgroundTint="@color/grey"
         android:src="@drawable/guest"
         android:contentDescription="@string/sign_up_btn"
@@ -33,7 +34,8 @@
 
     <TextView
         android:id="@+id/tv.share.review.discover"
-        android:layout_marginStart="2.5dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
         android:layout_width="111dp"
         android:layout_height="15dp"
         android:layout_alignParentStart="true"
@@ -54,13 +56,14 @@
 
     <TextView
         android:id="@+id/greetingTextView"
-        android:layout_marginStart="2.5dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:text="Signup / Login"
         android:textColorHint="#2F2F2F"
-        android:textSize="28sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
@@ -70,8 +73,9 @@
 
     <TextView
         android:id="@+id/viewAllButton"
+        android:layout_marginTop="8dp"
         android:layout_width="53dp"
-        android:layout_height="22dp"
+        android:layout_height="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -91,6 +95,8 @@
     <TextView
         android:id="@+id/tvDiscover"
         android:layout_marginStart="2.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dp"
         android:layout_width="125dp"
         android:layout_height="22dp"
         android:layout_alignParentStart="true"
@@ -118,7 +124,6 @@
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
-        android:padding="5dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeColor="@color/black"
         app:hintEnabled="false"
@@ -132,7 +137,7 @@
 
 
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -145,8 +150,8 @@
             android:maxLines="1"
             android:padding="5dp"
             android:scrollHorizontally="true"
-            android:textColor="#000000"
-            android:textColorHint="#FFFFFF"
+            android:textColor="#2f2f2f"
+            android:textColorHint="#9a9a9a"
             android:textSize="14sp"
             android:visibility="visible"/>
 
@@ -157,7 +162,7 @@
         android:id="@+id/divider"
         android:layout_width="320dp"
         android:layout_height="2dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:background="@color/black"
         android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -567,12 +572,12 @@
 
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="320dp"
-        android:layout_height="507dp"
+        android:layout_height="502dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_vertical_scrollview"
-        android:fadingEdgeLength="50dp"
         android:fillViewport="true"
         android:overScrollMode="always"
         android:scrollbars="none"
@@ -612,8 +617,8 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2.5dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Devices"
                 android:textColor="#2F2F2F"
@@ -682,7 +687,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -690,7 +695,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -765,7 +770,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -773,7 +778,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -849,7 +854,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -857,7 +862,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -933,7 +938,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -941,7 +946,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1017,7 +1022,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1025,7 +1030,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1098,7 +1103,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1106,7 +1111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1140,7 +1145,7 @@
                 <ImageView
                     android:layout_width="130dp"
                     android:layout_height="150dp"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/oppo_pad_2_img1" />
 
@@ -1179,7 +1184,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1187,7 +1192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1260,7 +1265,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1268,7 +1273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1335,13 +1340,14 @@
                     android:background="?android:attr/listDivider" />
 
                 <TextView
+                    android:id="@+id/SamsungGalaxyTabS10UltraPercentageOfRatings1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1349,7 +1355,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1357,7 +1363,7 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:id="@+id/tabletGalaxyTabS10UltraSeeMoreButton"
+                    android:id="@+id/UserDashboardSamsungGalaxyTabS10UltraSeeMoreButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -1422,7 +1428,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1430,7 +1436,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1504,7 +1510,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1512,7 +1518,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1585,7 +1591,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1593,7 +1599,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1664,9 +1670,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="145dp"
-                    android:layout_marginTop="116dp"
+                    android:layout_marginTop="118dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1674,8 +1680,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="52dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
                     android:textColor="#2F2F2F"
@@ -1748,7 +1754,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1756,7 +1762,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -1831,7 +1837,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -1839,7 +1845,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"

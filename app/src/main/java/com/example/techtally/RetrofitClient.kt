@@ -12,10 +12,14 @@ object RetrofitClient {
     // "10.0.2.2" is used to access the host machine from the Android emulator.
 //    DOMAIN FOR WIFI
 //    LAPTOP AND MOBILE MUST CONNECT ON THE SAME DOMAIN
-   // private const val BASE_URL = "http://192.168.100.112:80/api/"
+   // private const val BASE_URL = "http://192.168.100.112:8000/api/"
+    //private const val BASE_URL = "http://192.168.100.112:80/api/"
+    //private const val BASE_URL = "http://100.89.113.235:8000/api/"
+    //private const val BASE_URL = "http://192.168.43.41:8000/api/"
+   // private const val BASE_URL = "http://192.168.43.41:80/api/"
 
-//    DOMAIN FOR LOCAL EMU
-    private const val BASE_URL = "http://10.0.2.2:8000/api/"
+//DOMAIN FOR LOCAL EMU
+   private const val BASE_URL = "http://10.0.2.2:8000/api/"
     private var retrofit: Retrofit? = null
     // Create a Gson instance with lenient parsing settings.
     // Lenient mode allows parsing malformed or unexpected JSON.

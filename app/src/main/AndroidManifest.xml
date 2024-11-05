@@ -58,6 +58,9 @@
             android:name=".Iphone16ProMaxRateAndReviewActivity"
             android:exported="false" />
         <activity
+            android:name=".Iphone16ProMaxReviewsPage"
+            android:exported="false" />
+        <activity
             android:name=".laptopHuaweiMatebookXProFullDetails"
             android:exported="false" />
         <activity

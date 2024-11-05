@@ -182,10 +182,14 @@ class UserDashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
+            // Disable profileBtn for guests
+            profileBtn.isEnabled = false
         } else if (isLoggedIn) {
             // If the user is logged in, show the username
             greetingTextView.text = "Hello, $userName!"
             loginSignupBtn.text = "$userName!"
+            // Enable profileBtn for logged-in users
+            profileBtn.isEnabled = true
         } else {
             // Default case show "Login/Signup"
             greetingTextView.text = "Login/Signup"
@@ -198,17 +202,19 @@ class UserDashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
-
-
+            // Disable profileBtn for non-logged-in and non-guest users
+            profileBtn.isEnabled = false
         }
 
-        // Show popup when profile button is clicked
+// Show popup when profile button is clicked
         profileBtn.setOnClickListener {
-            // Show profile popup
-            profilePopup.visibility = View.VISIBLE
+            if (isLoggedIn) {
+                // Show profile popup only if the user is logged in
+                profilePopup.visibility = View.VISIBLE
+            }
         }
 
-        // Hide popup when profile button2 is clicked
+// Hide popup when profile button2 is clicked
         profileBtn2.setOnClickListener {
             // Hide profile popup
             profilePopup.visibility = View.GONE
@@ -228,8 +234,7 @@ class UserDashboardActivity : AppCompatActivity() {
             }
 
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-                val view =
-                    LayoutInflater.from(parent.context).inflate(R.layout.item_image, parent, false)
+                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_image, parent, false)
                 return ImageViewHolder(view)
             }
 
@@ -271,8 +276,7 @@ class UserDashboardActivity : AppCompatActivity() {
         )
 
         val recyclerView: RecyclerView = findViewById(R.id.RecyclerView)
-        recyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = ImageAdapter(this, images, titles) // Pass the context as 'this'
 
         val snapHelper = PagerSnapHelper()
@@ -352,11 +356,6 @@ class UserDashboardActivity : AppCompatActivity() {
             val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
             startActivity(intent)
         }
-        val tabletGalaxyTabS10UltraFullDetails = findViewById<TextView>(R.id.tabletGalaxyTabS10UltraSeeMoreButton)
-        tabletGalaxyTabS10UltraFullDetails.setOnClickListener {
-            val intent = Intent(this, GalaxyTabS10UltraFullDetails ::class.java)
-            startActivity(intent)
-        }
         val smartphoneOppoReno12ProFullDetails = findViewById<TextView>(R.id.smartphoneOppoReno12ProSeeMoreButton)
         smartphoneOppoReno12ProFullDetails.setOnClickListener {
             val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
@@ -390,6 +389,13 @@ class UserDashboardActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
+
+
         // Navigate from UserDashboardActivity to SmartphoneActivity
         val goTopSmartphoneActivity = findViewById<ImageView>(R.id.smartphonBtn)
         goTopSmartphoneActivity.setOnClickListener {
@@ -418,7 +424,7 @@ class UserDashboardActivity : AppCompatActivity() {
 
     private fun getFilteredSuggestions(query: String): List<String> {
         val results = suggestions.filter { it.contains(query, ignoreCase = true) }
-        return if (results.isEmpty()) listOf("Smartphone not found") else results
+        return results.ifEmpty { listOf("Smartphone not found") }
     }
     private fun navigateToDetailPage(selectedSuggestion: String) {
         when (selectedSuggestion) {
@@ -427,35 +433,91 @@ class UserDashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, SamsungSearchActivity::class.java)
                 startActivity(intent)
             }
-
             "Samsung Galaxy S24" -> {
                 // Existing navigation
                 val intent = Intent(this, SamsungGalaxyS24FullDetails::class.java)
                 startActivity(intent)
             }
-
+            "Samsung Galaxy Book3" -> {
+                // Existing navigation
+                val intent = Intent(this, laptopSamsungGalaxyBook3FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Samsung Galaxy Book4" -> {
+                // Existing navigation
+                val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
+                startActivity(intent)
+            }
             "Samsung Galaxy S24 Ultra" -> {
                 val intent = Intent(this, SamsungGalaxyS24UltraFullDetails::class.java)
                 startActivity(intent)
             }
-
             "iPhone 16 Pro Max" -> {
-                val intent = Intent(this, Iphone16ProMaxUserDashboard::class.java)
+                val intent = Intent(this, Iphone16ProMaxFullDetails::class.java)
                 startActivity(intent)
             }
-
+            "Apple Macbook M3 Pro " -> {
+                val intent = Intent(this, laptopAppleMacbookM3ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Apple Macbook M2 Pro 14 " -> {
+                val intent = Intent(this, laptopAppleM2MacBookPro14FullDetails::class.java)
+                startActivity(intent)
+            }
             "Xiaomi 14 Ultra" -> {
-                val intent = Intent(this, Xiaomi14UltraFullDetailsUserDashboard::class.java)
+                val intent = Intent(this, Xiaomi14UltraFullDetails::class.java)
                 startActivity(intent)
             }
-
-            "Oppo Reno 12 Pro" -> {
-                val intent = Intent(this, SmartphonesOppoReno12ProUserDashboard::class.java)
+            "Xiaomi Notebook Pro 120g " -> {
+                val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetails::class.java)
                 startActivity(intent)
             }
-
-            "Realme 13 Pro Plus" -> {
-                val intent = Intent(this, Realme13ProPlusUserDashboard::class.java)
+            "Xiaomi Pad 6 Pro " -> {
+                val intent = Intent(this, XiaomiPad6ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Oppo Reno 12 Pro " -> {
+                val intent = Intent(this, smartphoneOppoReno12ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Oppo Pad 2 " -> {
+            val intent = Intent(this, OppoPad2FullDetails::class.java)
+            startActivity(intent)
+            }
+            "Realme 13 Pro Plus " -> {
+                val intent = Intent(this, Realme13ProPlusFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Realme Pad 2 " -> {
+            val intent = Intent(this, RealmePad2FullDetails::class.java)
+            startActivity(intent)
+            }
+            "Vivo X100 Pro " -> {
+                val intent = Intent(this, VivoX100ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Google Pixel 9 Pro " -> {
+                val intent = Intent(this, smartphoneGooglePixel9ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Infinix Note 40 Pro+ " -> {
+                val intent = Intent(this, smartphoneInfinixNote40PlusFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Huawei Matebook 15 " -> {
+                val intent = Intent(this, laptopHuaweiMatebook15FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Huawei Matebook X pro " -> {
+                val intent = Intent(this, laptopHuaweiMatebookXProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Lenovo Legion 7i " -> {
+            val intent = Intent(this, laptopLenovoLegion7iFullDetails::class.java)
+            startActivity(intent)
+            }
+            "Lenovo Chromebook Duet 11 " -> {
+                val intent = Intent(this, laptopLenovoThinkPadT14sFullDetails::class.java)
                 startActivity(intent)
             }
         }

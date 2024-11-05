@@ -118,7 +118,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -126,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -198,7 +198,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -206,7 +206,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -278,7 +278,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -286,7 +286,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -358,7 +358,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -366,7 +366,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -438,7 +438,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -446,7 +446,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -518,7 +518,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -526,7 +526,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -598,7 +598,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -606,7 +606,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -678,7 +678,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -686,7 +686,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -758,7 +758,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -766,7 +766,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
