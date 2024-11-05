@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
+    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsScrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +14,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".AppleMacbookM3ProFullDetails">
+        tools:context=".SamsungGalaxyTabS10UltraFullDetails">
 
         <!-- Background of the picture -->
         <RelativeLayout
@@ -44,7 +44,7 @@
                 app:srcCompat="@drawable/macbook_m3_pro" />
 
             <ImageView
-                android:id="@+id/laptopAppleMacbookM3ProFullDetailsBackButton"
+                android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsBackButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentStart="true"
@@ -71,7 +71,6 @@
             app:layout_constraintVertical_bias="0.04000002">
 
             <TextView
-                android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
@@ -131,7 +130,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/percentageOfRatings"
+                        android:id="@+id/SamsungGalaxyTabS10UltraPercentageOfRatings"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="120dp"
@@ -157,7 +156,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/numberOfReviews"
+                        android:id="@+id/SamsungGalaxyTabS10UltraNumberOfReviews"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="130dp"
@@ -195,7 +194,6 @@
             app:layout_constraintTop_toBottomOf="@+id/typeOfDevice1">
 
             <TextView
-                android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -262,35 +260,35 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/samsungGalaxyS24FullDetailsRateButtonTally1"
+                    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsRateButtonTally1"
                     android:layout_width="15dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="60dp"
                     android:backgroundTint="#D9D9D9" />
 
                 <Button
-                    android:id="@+id/samsungGalaxyS24FullDetailsRateButtonTally2"
+                    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsRateButtonTally2"
                     android:layout_width="15dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="#D9D9D9" />
 
                 <Button
-                    android:id="@+id/samsungGalaxyS24FullDetailsRateButtonTally3"
+                    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsRateButtonTally3"
                     android:layout_width="15dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="#D9D9D9" />
 
                 <Button
-                    android:id="@+id/samsungGalaxyS24FullDetailsRateButtonTally4"
+                    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsRateButtonTally4"
                     android:layout_width="15dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="40dp"
                     android:backgroundTint="#D9D9D9" />
 
                 <Button
-                    android:id="@+id/samsungGalaxyS24FullDetailsRateButtonTally5"
+                    android:id="@+id/SamsungGalaxyTabS10UltraFullDetailsRateButtonTally5"
                     android:layout_width="15dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="40dp"
@@ -304,7 +302,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/samsungGalaxyS24FullDetailsWriteAndReviewButton"
+                    android:id="@+id/SamsungGalaxyTabS10FullDetailsWriteAndReviewButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -558,7 +556,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -1171,7 +1168,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
@@ -1261,6 +1257,98 @@
                     android:backgroundTint="#2F2F2F" />
             </LinearLayout>
         </LinearLayout>>
+
+        <LinearLayout
+            android:id="@+id/SamsungGalaxyTabS10UltraRatingsAndReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pricing1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Rating and reviews"
+                    android:textColor="#2F2F2F"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/SamsungGalaxyTabS10UltraSeeAllReviews1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="100dp"
+                    app:srcCompat="@drawable/figma_arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/SamsungGalaxyTabS10UltraMainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/SamsungGalaxyTabS10UltraRatingsAndReview">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/SamsungGalaxyTabS10UltraReviewsPageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/item_review" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/iPhone16ProMaxLinerLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SamsungGalaxyTabS10UltraMainScrollView">
+
+
+            <TextView
+                android:id="@+id/SamsungGalaxyTabS10UltraSeeAllReviews2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="See all reviews"
+                android:textColor="#2F2F2F" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iPhone16ProMaxLinerLayout9">
+
+
+            <TextView
+                android:id="@+id/SamsungGalaxyTabS10UltraBackToTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Back to top"
+                android:textColor="#2F2F2F" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

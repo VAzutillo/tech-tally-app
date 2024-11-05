@@ -26,10 +26,10 @@ class SamsungGalaxyS24ReviewsPage : AppCompatActivity() {
         reviewsRecyclerView = findViewById(R.id.reviewsRecyclerView)
 
         // Set up the RecyclerView with a LinearLayoutManager in reverse order
-        val samsungLayoutManager = LinearLayoutManager(this)
-        samsungLayoutManager.reverseLayout = true // Reverse layout to show newest items at the top
-        samsungLayoutManager.stackFromEnd = true  // Stack items from the end
-        reviewsRecyclerView.layoutManager = samsungLayoutManager
+        val LayoutManager = LinearLayoutManager(this)
+        LayoutManager.reverseLayout = true // Reverse layout to show newest items at the top
+        LayoutManager.stackFromEnd = true  // Stack items from the end
+        reviewsRecyclerView.layoutManager = LayoutManager
 
         // Initialize the adapter
         samsungGalaxyS24ReviewsAdapter = SamsungGalaxyS24ReviewsAdapter(samsungGalaxyS24ReviewsList)

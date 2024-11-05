@@ -37,7 +37,7 @@
     <View
         android:id="@+id/divider"
         android:layout_width="320dp"
-        android:layout_height="1.5dp"
+        android:layout_height="2dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
@@ -113,13 +113,14 @@
                     android:background="?android:attr/listDivider" />
 
                 <TextView
+                    android:id="@+id/SamsungGalaxyTabS10UltraPercentageOfRatings1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -127,7 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -164,6 +165,7 @@
                 <ImageView
                     android:layout_width="130dp"
                     android:layout_height="150dp"
+                    android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ipad13_pro_img2" />
 
@@ -200,7 +202,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -208,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -243,6 +245,7 @@
                 <ImageView
                     android:layout_width="130dp"
                     android:layout_height="150dp"
+                    android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/oppo_pad2_img3" />
 
@@ -279,7 +282,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -287,7 +290,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -358,7 +361,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -366,7 +369,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -433,7 +436,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -441,7 +444,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"
@@ -512,7 +515,7 @@
                     android:layout_marginStart="145dp"
                     android:layout_marginTop="116dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="0"
+                    android:text="0.00"
                     android:textColor="#2F2F2F"
                     android:textSize="13sp" />
 
@@ -520,7 +523,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="52dp"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="out of 5 Tally"

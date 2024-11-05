@@ -16,6 +16,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".SamsungGalaxyTabS10UltraReviewsPage"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyTabS10UltraRateAndReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyTabS10UltraFullDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BrandResultsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Xiaomi14UltraFullDetailsUserdshboard"
             android:exported="false" />
         <activity
@@ -41,6 +56,9 @@
             android:exported="false" />
         <activity
             android:name=".Iphone16ProMaxRateAndReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Iphone16ProMaxReviewsPage"
             android:exported="false" />
         <activity
             android:name=".laptopHuaweiMatebookXProFullDetails"

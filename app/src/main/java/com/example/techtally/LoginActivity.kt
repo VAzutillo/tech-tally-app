@@ -156,11 +156,11 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Navigate from loginPage to forgotPasswordPage
-        binding.forgotPasswordBtn.setOnClickListener {
+        //binding.forgotPasswordBtn.setOnClickListener {
             // Start ForgotPasswordActivity
-            val intent = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(intent)
-        }
+          //  val intent = Intent(this, ForgotPasswordActivity::class.java)
+            //startActivity(intent)
+        //}
 
         // Navigate from loginPage to SignupPage
         binding.ToSignUp.setOnClickListener {
