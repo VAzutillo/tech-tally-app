@@ -1,13 +1,11 @@
 package com.example.techtally
 
 import okhttp3.ResponseBody
-import retrofit2.http.Body
-import retrofit2.http.POST
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.DELETE
-import retrofit2.http.Field
 import retrofit2.http.GET
-import retrofit2.http.PUT
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -110,6 +108,9 @@ interface ApiService {
     @POST("review")
     fun submitAppleMacbookM3ProReview(@Body reviewRequest: ReviewRequest): Call<ReviewResponse>
 
+    @POST("review")
+    fun submitSamsungGalaxyTabS10UltraReview(@Body reviewRequest: ReviewRequest): Call<ReviewResponse>
+
     //@GET("review")
     //fun getIphone16ProMaxReviews(): Call<List<Iphone16ProMaxReview>>
 
@@ -122,8 +123,18 @@ interface ApiService {
     @GET("reviews")
     fun getAppleMacbookM3ProBySmartphoneId(@Query("smartphone_id") smartphoneId: Int): Call<List<AppleMacbookM3ProReview>>
 
+    @GET("reviews")
+    fun getSamsungGalaxyTabS10UltraBySmartphoneId(@Query("smartphone_id") smartphoneId: Int): Call<List<SamsungGalaxyTabS10UltraReview>>
+
 
     @GET("smartphone/{id}/ratings")
     fun getRatings(@Path("id") smartphoneId: Int): Call<SmartphoneRatingsResponse>
 
+    //@GET("reviews/{smartphone_id}")
+    //fun getSamsungGalaxyS24BySmartphoneId(
+    //    @Path("smartphone_id") smartphoneId: Int
+    //): Call<List<SamsungGalaxyS24Review>>
+
+    @DELETE("review/{id}")
+    fun deleteReview(@Path("id") reviewId: Int, reviewId1: Int): Call<ResponseBody?>?
 }

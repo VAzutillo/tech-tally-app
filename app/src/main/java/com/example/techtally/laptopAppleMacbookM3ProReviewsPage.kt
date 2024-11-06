@@ -55,7 +55,7 @@ class laptopAppleMacbookM3ProReviewsPage : AppCompatActivity() {
         }
         val backButton: ImageView = findViewById(R.id.AppleMacbookM3ProReviewsPageBackButton)
         backButton.setOnClickListener {
-            val intent = Intent(this, Iphone16ProMaxFullDetails::class.java).apply {
+            val intent = Intent(this, laptopAppleMacbookM3ProFullDetails::class.java).apply {
                 putParcelableArrayListExtra("APPLEMACBOOKM3PRO_REVIEWS_LIST", ArrayList(reviewListOfAppleMacbookM3Pro)) // Pass the reviews list
             }
             startActivity(intent)

@@ -9,10 +9,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -21,13 +24,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.techtally.RetrofitClient.apiService
 import com.example.techtally.databinding.ActivityUserDashboardBinding
-import com.google.android.material.textfield.TextInputEditText
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -47,8 +44,44 @@ class UserDashboardActivity : AppCompatActivity() {
     private lateinit var logoutBtn: ImageView           // LogoutImageView
     private var percentage_of_ratings: Float = 0.0f
 
-    private var smartphoneId = 1
-    private lateinit var searchBar: TextInputEditText
+    private var smartphoneId = 0
+    private lateinit var searchBar: AutoCompleteTextView
+    private val suggestions = listOf(
+        "Samsung",                     //Samsung Brands
+        "Samsung Galaxy S24",
+        "Samsung Galaxy S24 Ultra",
+        "Samsung Galaxy Tab S10",
+        "Samsung Galaxy Book4",
+        "Samsung Galaxy Book3",
+        "Apple",                        //Apple Brands
+        "Apple iPhone 16 Pro Max",
+        "Apple Macbook M3 Pro",
+        "Apple M2 Macbook Pro 14",
+        "Xiaomi",                       //Xiaomi Brands
+        "Xiaomi 14 Ultra",
+        "Xiaomi Pad 6 Pro",
+        "Xiaomi Notebook Pro",
+        "Oppo",                         //Oppo Brands
+        "Oppo Reno 12 Pro",
+        "Oppo Pad 2",
+        "Realme",                       //Realme Brands
+        "Realme 13 Pro Plus",
+        "Realme Pad 2",
+        "Vivo",                         //Vivo Brands
+        "Vivo X100 Pro",
+        "Google",                       //Pixel Brands
+        "Google Pixel 9 Pro",
+        "Infinix",                      //Infinix Brands
+        "Infinix Note 40 Pro+",
+        "Huawei",                   //Huawei Brands
+        "Huawei Matebook 15",
+        "Huawei Matebook X pro",
+        "Lenovo",                   //Lenovo Brands
+        "Lenovo Legion 7i",
+        "Lenovo ThinkPad T14s",
+        "Lenovo Chromebook Duet 11"
+
+    )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,18 +96,49 @@ class UserDashboardActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        searchBar = findViewById(R.id.searchBar)
+        val searchBar = findViewById<AutoCompleteTextView>(R.id.searchBar)
+        val dropdownAdapter =
+            ArrayAdapter<String>(this, R.layout.dropdown_item, mutableListOf())
+        searchBar.setAdapter(dropdownAdapter)
 
+        searchBar.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                // Get suggestions based on the current input
+                val filteredList = getFilteredSuggestions(s.toString())
+
+                // Update the dropdownAdapter with filtered results or "Smartphone not found" if no match
+                dropdownAdapter.clear()
+                dropdownAdapter.addAll(filteredList)
+                dropdownAdapter.notifyDataSetChanged()
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
+        searchBar.setOnItemClickListener { parent, view, position, id ->
+            val selectedSuggestion = parent.getItemAtPosition(position) as String
+            if (selectedSuggestion == "Smartphone not found") {
+                // Optional: Show a toast message or handle accordingly
+                Toast.makeText(this, "Smartphone not found", Toast.LENGTH_SHORT).show()
+            } else {
+                navigateToDetailPage(selectedSuggestion)
+            }
+        }
 
         // For User's profile
-        greetingTextView = findViewById(R.id.greetingTextView)      // Initialize tvLogin/Signup and User's name
-        profilePopup = binding.profilePopup                         // Initialize Layout profile pop up
-        profileBtn2 = binding.profileBtn2                           // Initialize profile button for open pop up
-        profileBtn = binding.profileBtn                             // Initialize profile button for close pop up
-        loginSignupBtn = binding.loginSignupBtn                     // Initialize tvLoginSignup and User's name inside the pop up
+        greetingTextView =
+            findViewById(R.id.greetingTextView)      // Initialize tvLogin/Signup and User's name
+        profilePopup =
+            binding.profilePopup                         // Initialize Layout profile pop up
+        profileBtn2 =
+            binding.profileBtn2                           // Initialize profile button for open pop up
+        profileBtn =
+            binding.profileBtn                             // Initialize profile button for close pop up
+        loginSignupBtn =
+            binding.loginSignupBtn                     // Initialize tvLoginSignup and User's name inside the pop up
 
-        searchBar = findViewById(R.id.searchBar)                    // Initialize search bar
 
         // Initialize logout button
         logoutBtn = findViewById(R.id.logoutBtn)
@@ -82,10 +146,12 @@ class UserDashboardActivity : AppCompatActivity() {
         smartphoneId = intent.getIntExtra("SMARTPHONE_ID", 1)
         smartphoneId = intent.getIntExtra("SMARTPHONE_ID", 2)
         smartphoneId = intent.getIntExtra("SMARTPHONE_ID", 3)
+        smartphoneId = intent.getIntExtra("SMARTPHONE_ID", 4)
 
         fetchSamsungS24Ratings()
         fetchIphone16ProMaxRatings()
         fetchAppleMacbookM3ProRatings()
+        fetchSamsungGalaxyTabS10UltraRatings()
 
         // Display the logout confirmation popup
         logoutBtn.setOnClickListener {
@@ -116,10 +182,14 @@ class UserDashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
+            // Disable profileBtn for guests
+            profileBtn.isEnabled = false
         } else if (isLoggedIn) {
             // If the user is logged in, show the username
             greetingTextView.text = "Hello, $userName!"
             loginSignupBtn.text = "$userName!"
+            // Enable profileBtn for logged-in users
+            profileBtn.isEnabled = true
         } else {
             // Default case show "Login/Signup"
             greetingTextView.text = "Login/Signup"
@@ -132,22 +202,23 @@ class UserDashboardActivity : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
-
+            // Disable profileBtn for non-logged-in and non-guest users
+            profileBtn.isEnabled = false
         }
 
-        // Show popup when profile button is clicked
+// Show popup when profile button is clicked
         profileBtn.setOnClickListener {
-            // Show profile popup
-            profilePopup.visibility = View.VISIBLE
+            if (isLoggedIn) {
+                // Show profile popup only if the user is logged in
+                profilePopup.visibility = View.VISIBLE
+            }
         }
 
-        // Hide popup when profile button2 is clicked
+// Hide popup when profile button2 is clicked
         profileBtn2.setOnClickListener {
             // Hide profile popup
             profilePopup.visibility = View.GONE
         }
-
-
 
 
         //ito yong code sa horizontal scrollview
@@ -176,7 +247,7 @@ class UserDashboardActivity : AppCompatActivity() {
                     val intent = when (position) {
                         0 -> Intent(context, SamsungGalaxyS24UltraFullDetails::class.java)
                         1 -> Intent(context, Xiaomi14UltraFullDetailsUserDashboard::class.java)
-                        2 -> Intent(context, Iphone16ProMaxUserDashboard::class.java)
+                        2 -> Intent(context, Iphone16ProMaxFullDetails::class.java)
                         3 -> Intent(context, SmartphonesOppoReno12ProUserDashboard::class.java)
                         4 -> Intent(context, Realme13ProPlusUserDashboard::class.java)
                         else -> null
@@ -216,7 +287,8 @@ class UserDashboardActivity : AppCompatActivity() {
 
 
         // Navigate from UserDashboardActivity to SamsungGalaxyS24FullDetailsActivity
-        val goTopSamsungGalaxyS24FullDetails = findViewById<TextView>(R.id.samsungGalaxyS24SeeMoreButton)
+        val goTopSamsungGalaxyS24FullDetails =
+            findViewById<TextView>(R.id.samsungGalaxyS24SeeMoreButton)
         goTopSamsungGalaxyS24FullDetails.setOnClickListener {
             // if the user is guess pass it to SamsungGalaxyS24FullDetails
             val intent = Intent(this, SamsungGalaxyS24FullDetails::class.java)
@@ -225,7 +297,8 @@ class UserDashboardActivity : AppCompatActivity() {
         }
 
         // Navigate from UserDashboardActivity to SamsungGalaxyS24UltraFullDetailsActivity
-        val goToSamsungGalaxyS24UltraFullDetails = findViewById<TextView>(R.id.samsungGalaxyS24UltraSeeMoreButton)
+        val goToSamsungGalaxyS24UltraFullDetails =
+            findViewById<TextView>(R.id.samsungGalaxyS24UltraSeeMoreButton)
         goToSamsungGalaxyS24UltraFullDetails.setOnClickListener {
             // if the user is guess pass it to SamsungGalaxyS24FullDetails
             val intent = Intent(this, SamsungGalaxyS24UltraFullDetails::class.java)
@@ -243,17 +316,36 @@ class UserDashboardActivity : AppCompatActivity() {
         }
 
         // Navigate from UserDashboardActivity to laptopAppleMacbookM3ProFullDetailsActivity
-        val goTolaptopAppleMacbookM3ProFullDetails = findViewById<TextView>(R.id.laptopMacBookM3ProSeeMoreButton)
+        val goTolaptopAppleMacbookM3ProFullDetails =
+            findViewById<TextView>(R.id.laptopMacBookM3ProSeeMoreButton)
         goTolaptopAppleMacbookM3ProFullDetails.setOnClickListener {
             // if the user is guess pass it to SamsungGalaxyS24FullDetails
             val intent = Intent(this, laptopAppleMacbookM3ProFullDetails::class.java)
             intent.putExtra("IS_GUEST", false) // Pass the guest flag
             startActivity(intent)
         }
+
+        // Navigate from UserDashboardActivity to SamsungGalaxyTabS10UltraFullDetails
+        val goToSamsungGalaxyTabS10UltraFullDetails =
+            findViewById<TextView>(R.id.UserDashboardSamsungGalaxyTabS10UltraSeeMoreButton)
+        goToSamsungGalaxyTabS10UltraFullDetails.setOnClickListener {
+            // if the user is guess pass it to SamsungGalaxyS24FullDetails
+            val intent = Intent(this, SamsungGalaxyTabS10UltraFullDetails::class.java)
+            intent.putExtra("IS_GUEST", false) // Pass the guest flag
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
         // Navigate from UserDashboardActivity to SamsungGalaxyS24FullDetailsActivity
-        val xiaomiNotebookProFullDetails = findViewById<TextView>(R.id.xiaomiNotebookProSeeMoreButton)
+        val xiaomiNotebookProFullDetails =
+            findViewById<TextView>(R.id.xiaomiNotebookProSeeMoreButton)
         xiaomiNotebookProFullDetails.setOnClickListener {
-            val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetails::class.java)
+            val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         //
@@ -265,50 +357,39 @@ class UserDashboardActivity : AppCompatActivity() {
         // Navigate from UserDashboardActivity to SamsungGalaxyS24FullDetailsActivity
         val oppoPad2FullDetails = findViewById<TextView>(R.id.oppoPad2SeeMoreButton)
         oppoPad2FullDetails.setOnClickListener {
-            val intent = Intent(this, OppoPad2FullDetails::class.java)
+            val intent = Intent(this, OppoPad2FullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         // Navigate from UserDashboardActivity to SamsungGalaxyS24FullDetailsActivity
         val galaxyBook4SeriesFullDetails = findViewById<TextView>(R.id.galaxyBook4SeeMoreButton)
         galaxyBook4SeriesFullDetails.setOnClickListener {
-            val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
-            startActivity(intent)
-        }
-        val tabletGalaxyTabS10UltraFullDetails = findViewById<TextView>(R.id.tabletGalaxyTabS10UltraSeeMoreButton)
-        tabletGalaxyTabS10UltraFullDetails.setOnClickListener {
-            val intent = Intent(this, GalaxyTabS10UltraFullDetails ::class.java)
+            val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         val smartphoneOppoReno12ProFullDetails = findViewById<TextView>(R.id.smartphoneOppoReno12ProSeeMoreButton)
         smartphoneOppoReno12ProFullDetails.setOnClickListener {
-            val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
+            val intent = Intent(this, SmartphonesOppoReno12ProUserDashboard::class.java)
             startActivity(intent)
         }
-        val tabletOppoPad2FullDetails = findViewById<TextView>(R.id.tabletOppoPad2SeeMoreButton)
-        tabletOppoPad2FullDetails.setOnClickListener {
-            val intent = Intent(this, OppoPad2FullDetails::class.java)
-            startActivity(intent)
-        }
-        val smartphoneGooglePixel9ProFullDetails = findViewById<TextView>(R.id.smartphoneGooglePixel9ProSeeMoreButton)
-        smartphoneGooglePixel9ProFullDetails.setOnClickListener {
-            val intent = Intent(this, smartphoneGooglePixel9ProFullDetails::class.java)
+        val smartphonesGooglePixel9ProFullDetails = findViewById<TextView>(R.id.smartphoneGooglePixel9ProSeeMoreButton)
+        smartphonesGooglePixel9ProFullDetails.setOnClickListener {
+            val intent = Intent(this, smartphoneGooglePixel9ProFullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         val tabletXiaomiPad6ProFullDetails = findViewById<TextView>(R.id.tabletXiaomiPad6ProSeeMoreButton)
         tabletXiaomiPad6ProFullDetails.setOnClickListener {
-            val intent = Intent(this, XiaomiPad6ProFullDetails::class.java)
-            startActivity(intent)
-        }
-        val laptopXiaomiNotebookProFullDetails = findViewById<TextView>(R.id.laptopXiaomiNotebookProSeeMoreButton)
-        laptopXiaomiNotebookProFullDetails.setOnClickListener {
-            val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetails::class.java)
+            val intent = Intent(this, XiaomiPad6ProFullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         val tabletRealmePad2FullDetails = findViewById<TextView>(R.id.tabletRealmePad2SeeMoreButton)
         tabletRealmePad2FullDetails.setOnClickListener {
-            val intent = Intent(this, RealmePad2FullDetails::class.java)
+            val intent = Intent(this, RealmePad2FullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
+
+
+
+
 
 
 
@@ -344,6 +425,106 @@ class UserDashboardActivity : AppCompatActivity() {
         }
     }
 
+    private fun getFilteredSuggestions(query: String): List<String> {
+        val results = suggestions.filter { it.contains(query, ignoreCase = true) }
+        return results.ifEmpty { listOf("Smartphone not found") }
+    }
+    private fun navigateToDetailPage(selectedSuggestion: String) {
+        when (selectedSuggestion) {
+            "Samsung" -> {
+                // Navigate to the new page that displays all Samsung smartphones
+                val intent = Intent(this, SamsungSearchActivity::class.java)
+                startActivity(intent)
+            }
+            "Samsung Galaxy S24" -> {
+                // Existing navigation
+                val intent = Intent(this, SamsungGalaxyS24FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Samsung Galaxy Book3" -> {
+                // Existing navigation
+                val intent = Intent(this, laptopSamsungGalaxyBook3FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Samsung Galaxy Book4" -> {
+                // Existing navigation
+                val intent = Intent(this, laptopSamsungGalaxyBook4SeriesFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Samsung Galaxy S24 Ultra" -> {
+                val intent = Intent(this, SamsungGalaxyS24UltraFullDetails::class.java)
+                startActivity(intent)
+            }
+            "iPhone 16 Pro Max" -> {
+                val intent = Intent(this, Iphone16ProMaxFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Apple Macbook M3 Pro " -> {
+                val intent = Intent(this, laptopAppleMacbookM3ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Apple Macbook M2 Pro 14 " -> {
+                val intent = Intent(this, laptopAppleM2MacBookPro14FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Xiaomi 14 Ultra" -> {
+                val intent = Intent(this, Xiaomi14UltraFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Xiaomi Notebook Pro 120g " -> {
+                val intent = Intent(this, laptopXiaomiNotebookPro120gFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Xiaomi Pad 6 Pro " -> {
+                val intent = Intent(this, XiaomiPad6ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Oppo Reno 12 Pro " -> {
+                val intent = Intent(this, smartphoneOppoReno12ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Oppo Pad 2 " -> {
+            val intent = Intent(this, OppoPad2FullDetails::class.java)
+            startActivity(intent)
+            }
+            "Realme 13 Pro Plus " -> {
+                val intent = Intent(this, Realme13ProPlusFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Realme Pad 2 " -> {
+            val intent = Intent(this, RealmePad2FullDetails::class.java)
+            startActivity(intent)
+            }
+            "Vivo X100 Pro " -> {
+                val intent = Intent(this, VivoX100ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Google Pixel 9 Pro " -> {
+                val intent = Intent(this, smartphoneGooglePixel9ProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Infinix Note 40 Pro+ " -> {
+                val intent = Intent(this, smartphoneInfinixNote40PlusFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Huawei Matebook 15 " -> {
+                val intent = Intent(this, laptopHuaweiMatebook15FullDetails::class.java)
+                startActivity(intent)
+            }
+            "Huawei Matebook X pro " -> {
+                val intent = Intent(this, laptopHuaweiMatebookXProFullDetails::class.java)
+                startActivity(intent)
+            }
+            "Lenovo Legion 7i " -> {
+            val intent = Intent(this, laptopLenovoLegion7iFullDetails::class.java)
+            startActivity(intent)
+            }
+            "Lenovo Chromebook Duet 11 " -> {
+                val intent = Intent(this, laptopLenovoThinkPadT14sFullDetails::class.java)
+                startActivity(intent)
+            }
+        }
+    }
 
     // Show logout confirmation dialog popup
     private fun showLogoutDialog() {
@@ -448,6 +629,29 @@ class UserDashboardActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<SmartphoneRatingsResponse>, t: Throwable) {
                 Log.e("UserDashboardActivity", "Error fetching iPhone 16 Pro Max ratings: ${t.message}")
+            }
+        })
+    }
+
+    // Function to fetch and display ratings for Samsung Galaxy Tab S10 Ultra
+    private fun fetchSamsungGalaxyTabS10UltraRatings() {
+        val SmartphoneId = 4 // Set the specific ID for iPhone 16 Pro Max
+        RetrofitClient.apiService.getRatings(SmartphoneId).enqueue(object :
+            Callback<SmartphoneRatingsResponse> {
+            override fun onResponse(
+                call: Call<SmartphoneRatingsResponse>,
+                response: Response<SmartphoneRatingsResponse>
+            ) {
+                if (response.isSuccessful && response.body() != null) {
+                    val ratingsData = response.body()!!
+
+                    val PercentageOfRatings = ratingsData.percentage_of_ratings
+                    binding.SamsungGalaxyTabS10UltraPercentageOfRatings1.text = "$PercentageOfRatings"
+                }
+            }
+
+            override fun onFailure(call: Call<SmartphoneRatingsResponse>, t: Throwable) {
+
             }
         })
     }

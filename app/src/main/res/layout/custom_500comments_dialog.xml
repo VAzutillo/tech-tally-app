@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:background="@drawable/dialog_radius"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="60dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/custom500commentsMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="The comment should not exceed 500 letters."
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/custom500commentsOkayButton"
+                android:layout_width="90dp"
+                android:layout_height="38dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="#4CAF50"
+                android:outlineSpotShadowColor="@color/black"
+                android:padding="8dp"
+                android:text="Okay"
+                android:textSize="10sp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -4,11 +4,13 @@ package com.example.techtally
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -65,7 +67,19 @@ class SamsungGalaxyS24RateAndReviewActivity : AppCompatActivity() {
         // Get user input
         val commentInput = findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.rateAndReviewComment)
         val rateOfTheUser = selectedRating // Use selectedRating
-        val commentOfTheUser = commentInput.text.toString()
+        val commentOfTheUser = commentInput.text.toString().trim() // Trim whitespace
+
+        // Check if the comment is empty or only contains spaces
+        if (commentOfTheUser.isEmpty()) {
+            showCustomDialog("Please enter a comment!")
+            return
+        }
+
+        // Check if the comment exceeds 500 characters
+        if (commentOfTheUser.length > 500) {
+            showCustomDialog("The comment should not exceed 500 letters!")
+            return
+        }
 
         smartphoneId = intent.getIntExtra("SMARTPHONE_ID", 1)
 
@@ -85,7 +99,7 @@ class SamsungGalaxyS24RateAndReviewActivity : AppCompatActivity() {
         RetrofitClient.instance.submitReview(reviewRequest).enqueue(object : Callback<ReviewResponse> {
             override fun onResponse(call: Call<ReviewResponse>, response: Response<ReviewResponse>) {
                 if (response.isSuccessful) {
-                    val newReview = SamsungGalaxyS24Review(username = userName ?: "Guest", rating = rateOfTheUser, comment = commentOfTheUser, smartphoneId = smartphoneId,)
+                    val newReview = SamsungGalaxyS24Review(username = userName ?: "Guest", rating = rateOfTheUser, comment = commentOfTheUser, smartphoneId = smartphoneId)
                     val percentageOfRatings = sharedPreferences.getFloat("PERCENTAGE_OF_RATINGS", 0.0f)
 
                     val resultIntent = Intent()
@@ -112,6 +126,29 @@ class SamsungGalaxyS24RateAndReviewActivity : AppCompatActivity() {
                 Toast.makeText(this@SamsungGalaxyS24RateAndReviewActivity, "API call failed: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+    private fun showCustomDialog(message: String) {
+        // Inflate the custom dialog layout
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_500comments_dialog, null)
+
+        // Build the AlertDialog with custom layout
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setCancelable(false) // Prevent dismissing by tapping outside
+            .create()
+
+        // Set message to the TextView in the dialog
+        val messageTextView = dialogView.findViewById<TextView>(R.id.custom500commentsMessage)
+        messageTextView.text = message
+
+        // Set the OK button click listener to close the dialog
+        val okButton = dialogView.findViewById<Button>(R.id.custom500commentsOkayButton)
+        okButton.setOnClickListener {
+            alertDialog.dismiss() // Close the dialog
+        }
+
+        // Show the custom dialog
+        alertDialog.show()
     }
 
     // Implement this method to return the updated number of reviews

@@ -154,32 +154,35 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="310dp"
-                    android:layout_height="280dp"
+                    android:layout_height="315dp"
                     android:layout_marginLeft="25dp"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="20dp"
                     app:boxCornerRadiusBottomStart="20dp"
                     app:boxCornerRadiusTopEnd="20dp"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:letterSpacing="0.1"
                     android:maxLines="8"
-                    android:scrollbars="vertical"
+                    android:minLines="1"
                     app:boxCornerRadiusTopStart="20dp"
                     app:boxStrokeColor="#2F2F2F"
-                    app:boxStrokeWidth="2dp">
+                    app:boxStrokeWidth="2dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/rateAndReviewComment"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Type here..."
-                        android:paddingStart="20dp"
-                        android:scrollbars="vertical"
+                        android:layout_width="310dp"
+                        android:layout_height="290dp"
                         android:gravity="top"
+                        android:hint="Type here..."
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="ifContentScrolls"
                         android:maxLines="10"
                         android:minLines="1"
-                        android:inputType="textMultiLine"
-                        android:paddingBottom="240dp"
+                        android:paddingStart="20dp"
+
+                        android:scrollbars="vertical"
                         android:textColorHint="#D9D9D9"
                         android:textSize="12sp" />
                 </com.google.android.material.textfield.TextInputLayout>

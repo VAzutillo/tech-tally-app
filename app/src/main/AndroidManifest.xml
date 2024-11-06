@@ -16,6 +16,129 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".XiaomiPad6ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".Xiaomi14UltraFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".VivoX100ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".smartphoneOppoReno12ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".smartphoneInfinixNote40PlusFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".smartphoneGooglePixel9ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyS24UltraFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyS24FullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".RealmePad2FullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".Realme13ProPlusViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".OppoPad2FullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".LenovoChromebookDuet11ViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopXiaomiNotebookPro120gFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopSamsungGalaxyBook4SeriesFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopSamsungGalaxyBook3FullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopLenovoThinkPadT14sFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopLenovoLegion7iFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopHuaweiMatebookXProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopHuaweiMatebook15FullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopAppleMacbookM3ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".laptopAppleM2MacBookPro14ViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".Iphone16ProViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".Ipad13ProFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".GalaxyTabS10UltraFullDetailsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".smartphoneOppoReno12ProFullDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyS24UltraFullDetailsSmartphoneCategory"
+            android:exported="false" />
+        <activity
+            android:name=".RealmePad2FullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".XiaomiPad6ProFullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".smartphoneGooglePixel9ProFullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".OppoPad2FullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Ipad13ProFullDetailsTabletCategory"
+            android:exported="false" />
+        <activity
+            android:name=".laptopXiaomiNotebookPro120gFullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".GalaxyTabS10UltraFullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".laptopSamsungGalaxyBook4SeriesFullDetailsUserDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".laptopAppleMacbookM3ProFullDetailsLaptopCategory"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyS24SmartphoneCategory"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyTabS10UltraReviewsPage"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyTabS10UltraRateAndReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungGalaxyTabS10UltraFullDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SamsungSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BrandResultsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Xiaomi14UltraFullDetailsUserdshboard"
             android:exported="false" />
         <activity
@@ -41,6 +164,9 @@
             android:exported="false" />
         <activity
             android:name=".Iphone16ProMaxRateAndReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Iphone16ProMaxReviewsPage"
             android:exported="false" />
         <activity
             android:name=".laptopHuaweiMatebookXProFullDetails"
@@ -108,9 +234,6 @@
             android:exported="false" />
         <activity
             android:name=".smartphoneXiaomiRedmiNote14_5G"
-            android:exported="false" />
-        <activity
-            android:name=".smartphoneOppoReno12ProFullDetails"
             android:exported="false" />
         <activity
             android:name=".smartphoneGooglePixel9ProFullDetails"

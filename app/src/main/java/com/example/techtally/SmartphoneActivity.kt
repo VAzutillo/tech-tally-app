@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -56,21 +57,26 @@ class SmartphoneActivity : AppCompatActivity() {
         val goToSamsungGalaxyS24FullDetails =
             findViewById<TextView>(R.id.smartphoneSamsungGalaxyS24SeeMoreButton)
         goToSamsungGalaxyS24FullDetails.setOnClickListener {
-            val intent = Intent(this, SamsungGalaxyS24FullDetails::class.java)
+            val intent = Intent(this, SamsungGalaxyS24SmartphoneCategory::class.java)
             startActivity(intent)
         }
         // Navigate from SmartphoneActivity to Iphone16ProMaxFullDetails
         val goToSamsungIphone16ProMaxFullDetails =
-            findViewById<TextView>(R.id.smartphoneIphone16ProMaxSeeMoreButton)
+            findViewById<TextView>(R.id.smartphoneIphone16ProMaxSeeMoreButton2)
         goToSamsungIphone16ProMaxFullDetails.setOnClickListener {
-            val intent = Intent(this, Iphone16ProMaxFullDetails::class.java)
+            val intent = Intent(this, Iphone16ProMaxUserDashboard::class.java)
             startActivity(intent)
         }
         // Navigate from SmartphoneActivity to SamsungGalaxyS24UltraFullDetails
         val goToSamsungSamsungGalaxyS24UltraFullDetails =
             findViewById<TextView>(R.id.smartphoneSamsungGalaxyS24UltraSeeMoreButton)
         goToSamsungSamsungGalaxyS24UltraFullDetails.setOnClickListener {
-            val intent = Intent(this, SamsungGalaxyS24UltraFullDetails::class.java)
+            val intent = Intent(this, SamsungGalaxyS24UltraFullDetailsSmartphoneCategory::class.java)
+            startActivity(intent)
+        }
+        val smartphonesGooglePixel9ProFullDetails = findViewById<TextView>(R.id.smartphoneGooglePixel9ProSeeMoreButton)
+        smartphonesGooglePixel9ProFullDetails.setOnClickListener {
+            val intent = Intent(this, smartphoneGooglePixel9ProFullDetails::class.java)
             startActivity(intent)
         }
         // Navigate from SmartphoneActivity to VivoX100ProFullDetails
@@ -80,6 +86,12 @@ class SmartphoneActivity : AppCompatActivity() {
             val intent = Intent(this, VivoX100ProFullDetails::class.java)
             startActivity(intent)
         }
+
+        val smartphoneInfinixNote40ProPlusFullDetails = findViewById<TextView>(R.id.smartphoneInfinixNote40ProPlusSeeMoreButton)
+        smartphoneInfinixNote40ProPlusFullDetails.setOnClickListener {
+            val intent = Intent(this, smartphoneInfinixNote40PlusFullDetails::class.java)
+            startActivity(intent)
+        }
         // Navigate from SmartphoneActivity to Realme13ProPlusFullDetails
         val goToRealme13ProPlusFullDetails =
             findViewById<TextView>(R.id.smartphoneRealme13ProPlusSeeMoreButton)
@@ -87,7 +99,31 @@ class SmartphoneActivity : AppCompatActivity() {
             val intent = Intent(this, Realme13ProPlusFullDetails::class.java)
             startActivity(intent)
         }
+        // Navigate from SmartphoneActivity to Realme13ProPlusFullDetails
+        val smartphoneXiaomi14UltraFullDetails =
+            findViewById<TextView>(R.id.smartphoneXiaomi14UltraSeeMoreButton)
+        smartphoneXiaomi14UltraFullDetails.setOnClickListener {
+            val intent = Intent(this, Xiaomi14UltraFullDetails::class.java)
+            startActivity(intent)
+        }
+
+        // Scroll to top functionality for ScrollView
+        val scrollView: ScrollView = findViewById(R.id.SamsungGalaxyS24FullDetailsScrollView)
+        val backToTopTextView: TextView = findViewById(R.id.SamsungS24BackToTop)
+
+        // Scroll to the top of the ScrollView
+        backToTopTextView.setOnClickListener {
+            scrollView.scrollTo(0, 0)
+        }
     }
+
+
+
+
+
+
+
+
 
     private fun fetchSamsungS24Ratings() {
         val samsungSmartphoneId = 1 // Set the specific ID for Samsung Galaxy S24
