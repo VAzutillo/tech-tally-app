@@ -91,26 +91,28 @@ class SamsungGalaxyS24FullDetails : AppCompatActivity() {
         backToTopTextView.setOnClickListener {
             scrollView.scrollTo(0, 0)
         }
-
+        // see all reviews 1
         // Navigate from SamsungGalaxyS24FullDetails to SamsungGalaxyS24ReviewsPage
         val goToSamsungGalaxyS24SeeAllRatingsAndReviews1 = findViewById<ImageView>(R.id.SamsungS24SeeAllReviews1)
         goToSamsungGalaxyS24SeeAllRatingsAndReviews1.setOnClickListener {
             val intent = Intent(this, SamsungGalaxyS24ReviewsPage::class.java)
             startActivity(intent)
         }
+        // see all reviews 2
         // Navigate from SamsungGalaxyS24FullDetails to SamsungGalaxyS24ReviewsPage
         val goToSamsungGalaxyS24SeeAllRatingsAndReviews2 = findViewById<TextView>(R.id.SamsungS24SeeAllReviews2)
         goToSamsungGalaxyS24SeeAllRatingsAndReviews2.setOnClickListener {
             val intent = Intent(this, SamsungGalaxyS24ReviewsPage::class.java)
             startActivity(intent)
         }
+        // back button
         // Navigate back to UserDashboardActivity when back button is clicked
         val backToSamsungGalaxyS24FullDetails = findViewById<ImageView>(R.id.samsungGalaxyS24FullDetailsBackButton)
         backToSamsungGalaxyS24FullDetails.setOnClickListener {
             val intent = Intent(this, UserDashboardActivity::class.java)
             startActivity(intent)
         }
-
+        // see all reviews 3
         // Navigate from SamsungGalaxyS24FullDetails to SamsungGalaxyS24ReviewsPage
         val goToSamsungGalaxyS24ReviewsPage = findViewById<TextView>(R.id.numberOfReviews)
         goToSamsungGalaxyS24ReviewsPage.setOnClickListener {

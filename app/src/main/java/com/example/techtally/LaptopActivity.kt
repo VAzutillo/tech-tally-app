@@ -44,7 +44,7 @@ class LaptopActivity : AppCompatActivity() {
         }
         val goToMacbookM3ProFullDetailsActivity = findViewById<TextView>(R.id.laptopMacBookM3ProSeeMoreButton)
         goToMacbookM3ProFullDetailsActivity.setOnClickListener {
-            val intent = Intent(this, laptopAppleMacbookM3ProFullDetails::class.java)
+            val intent = Intent(this, laptopAppleMacbookM3ProFullDetailsLaptopCategory::class.java)
             startActivity(intent)
         }
         val goToSamsungGalaxyBook4SeriesFullDetailsActivity = findViewById<TextView>(R.id.laptopGalaxyBook4SeriesSeeMoreButton)

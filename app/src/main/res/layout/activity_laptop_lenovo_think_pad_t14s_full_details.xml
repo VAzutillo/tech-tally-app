@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView
+    android:id="@+id/SamsungGalaxyS24FullDetailsScrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +15,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".AppleMacbookM3ProFullDetails">
+        tools:context=".laptopLenovoThinkPadT14sFullDetails">
 
         <!-- Background of the picture -->
         <RelativeLayout
@@ -1259,6 +1260,98 @@
                     android:layout_marginLeft="20dp"
                     android:background="#2F2F2F"
                     android:backgroundTint="#2F2F2F" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/RatingsAndReview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Pricing1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Rating and reviews"
+                        android:textColor="#2F2F2F"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/SamsungS24SeeAllReviews1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        app:srcCompat="@drawable/figma_arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/SamsungS24Reviews1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/RatingsAndReview1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewsRecyclerView"
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:listitem="@layout/item_review" />
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/SamsungS24SeeAllReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SamsungS24Reviews1">
+
+
+                <TextView
+                    android:id="@+id/SamsungS24SeeAllReviews2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="See all reviews"
+                    android:textColor="#2F2F2F" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SamsungS24SeeAllReviews">
+
+
+                <TextView
+                    android:id="@+id/SamsungS24BackToTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Back to top"
+                    android:textColor="#2F2F2F" />
             </LinearLayout>
         </LinearLayout>>
 

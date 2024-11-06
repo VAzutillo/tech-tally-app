@@ -154,7 +154,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="310dp"
-                    android:layout_height="300dp"
+                    android:layout_height="315dp"
                     android:layout_marginLeft="25dp"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="20dp"
@@ -166,7 +166,9 @@
                     android:minLines="1"
                     app:boxCornerRadiusTopStart="20dp"
                     app:boxStrokeColor="#2F2F2F"
-                    app:boxStrokeWidth="2dp">
+                    app:boxStrokeWidth="2dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/rateAndReviewComment"

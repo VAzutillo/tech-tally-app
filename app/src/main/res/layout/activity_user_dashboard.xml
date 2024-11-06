@@ -574,7 +574,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="320dp"
-        android:layout_height="502dp"
+        android:layout_height="505dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_vertical_scrollview"
@@ -596,8 +596,8 @@
                 android:id="@+id/RecyclerView"
                 android:layout_width="315dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="2.5dp"
                 android:layout_marginTop="25dp"
+                android:layout_marginStart="2.5dp"
                 android:scrollbarThumbHorizontal="@drawable/scrollbar_thumb"
                 android:scrollbarTrackHorizontal="@drawable/scrollbars_track"
                 android:background="@drawable/rounded_corner"
@@ -1461,86 +1461,6 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="320dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="150dp"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/oppo_pad_2_img1" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Oppo Pad 2"
-                    android:textColor="@color/light_black"
-                    android:textSize="15sp" />
-
-
-                <TextView
-
-                    android:layout_width="180dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="30dp"
-                    android:text="Oppo Pad 2 features an 11.6-inch 2K display with a 144Hz refresh rate, 8GB of RAM and more."
-                    android:textSize="13sp" />
-
-                <View
-
-                    android:layout_width="180dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="100dp"
-                    android:background="?android:attr/listDivider" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="145dp"
-                    android:layout_marginTop="116dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="0.00"
-                    android:textColor="#2F2F2F"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="out of 5 Tally"
-                    android:textColor="#2F2F2F"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/tabletOppoPad2SeeMoreButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="116dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="SEE MORE"
-                    android:textColor="@color/light_grey"
-                    android:textSize="12sp"
-                    android:background="@drawable/underline_effect"
-                    android:focusable="true"
-                    android:clickable="true"
-                    android:paddingBottom="2dp"/>
-
-            </FrameLayout>
 
             <FrameLayout
                 android:layout_width="320dp"
@@ -1705,87 +1625,7 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="320dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="150dp"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/xioami_notebook_pro_120g" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Xiaomi Notebook Pro 120G"
-                    android:textColor="@color/light_black"
-                    android:textSize="15sp" />
-
-
-                <TextView
-
-                    android:layout_width="180dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="30dp"
-                    android:text="Xiaomi Notebook Pro features a 120Hz 2.5K display, 12th Gen Intel Core i5, NVIDIA GeForce and more."
-                    android:textSize="13sp" />
-
-                <View
-
-                    android:layout_width="180dp"
-                    android:layout_height="2dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="100dp"
-                    android:background="?android:attr/listDivider" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="145dp"
-                    android:layout_marginTop="116dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="0.00"
-                    android:textColor="#2F2F2F"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="out of 5 Tally"
-                    android:textColor="#2F2F2F"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/laptopXiaomiNotebookProSeeMoreButton"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="116dp"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="SEE MORE"
-                    android:textColor="@color/light_grey"
-                    android:textSize="12sp"
-                    android:background="@drawable/underline_effect"
-                    android:focusable="true"
-                    android:clickable="true"
-                    android:paddingBottom="2dp"/>
-
-            </FrameLayout>
 
             <FrameLayout
                 android:layout_width="320dp"

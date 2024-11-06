@@ -20,7 +20,7 @@ class GalaxyTabS10UltraFullDetails : AppCompatActivity() {
         }
         val goToUserDashboardActivity = findViewById<ImageView>(R.id.samsungGalaxyS24FullDetailsBackButton)
         goToUserDashboardActivity.setOnClickListener {
-            val intent = Intent(this, TabletActivity::class.java)
+            val intent = Intent(this, UserDashboardActivity::class.java)
             startActivity(intent)
         }
     }

@@ -1,14 +1,11 @@
 package com.example.techtally
 
 import okhttp3.ResponseBody
-import retrofit2.http.Body
-import retrofit2.http.POST
 import retrofit2.Call
-import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.DELETE
-import retrofit2.http.Field
 import retrofit2.http.GET
-import retrofit2.http.PUT
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -138,4 +135,6 @@ interface ApiService {
     //    @Path("smartphone_id") smartphoneId: Int
     //): Call<List<SamsungGalaxyS24Review>>
 
+    @DELETE("review/{id}")
+    fun deleteReview(@Path("id") reviewId: Int, reviewId1: Int): Call<ResponseBody?>?
 }

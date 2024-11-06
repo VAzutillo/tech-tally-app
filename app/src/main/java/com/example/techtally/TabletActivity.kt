@@ -46,13 +46,13 @@ class TabletActivity : AppCompatActivity() {
         // Navigate from TabletActivity to GalaxyTabS10UltraFullDetails
         val galaxyTabS10UltraSeeMoreBTN = findViewById<TextView>(R.id.tabletGalaxyTabS10UltraSeeMoreButton)
         galaxyTabS10UltraSeeMoreBTN.setOnClickListener {
-            val intent = Intent(this, SamsungGalaxyTabS10UltraFullDetails::class.java)
+            val intent = Intent(this, GalaxyTabS10UltraFullDetailsUserDashboard::class.java)
             startActivity(intent)
         }
         // Navigate from TabletActivity to Ipad13ProFullDetails
         val ipad13ProSeeMoreBTN = findViewById<TextView>(R.id.tabletIpad13ProSeeMoreButton)
         ipad13ProSeeMoreBTN.setOnClickListener {
-            val intent = Intent(this, Ipad13ProFullDetails::class.java)
+            val intent = Intent(this, Ipad13ProFullDetailsTabletCategory::class.java)
             startActivity(intent)
         }
         // Navigate from TabletActivity to OppoPad2FullDetails

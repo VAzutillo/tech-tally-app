@@ -26,6 +26,7 @@ class SamsungGalaxyS24ReviewsAdapter(private var reviews: MutableList<SamsungGal
             rateOfTheUser.text = review.rating.toString()
             // Setting the comment from the Review object to the comment TextView.
             commentOfTheUser.text = review.comment
+
         }
     }
 
@@ -42,6 +43,7 @@ class SamsungGalaxyS24ReviewsAdapter(private var reviews: MutableList<SamsungGal
     override fun onBindViewHolder(holder: ReviewViewHolder, position: Int) {
         // Getting the review data at the current position and binding it to the ViewHolder.
         holder.bind(reviews[position])
+
     }
     // This method returns the total number of items in the 'reviews' list
     override fun getItemCount(): Int {
